@@ -6,10 +6,59 @@ body {
 }
 .task1::before {
   counter-increment: task1;
-  content: "Section " counter(task1) ":";
+  content: "Section " counter(task1) " : ";
 }
 .task1::after {
   content: " " counter(task1);
+}
+
+.task2-list {
+  display: inline-flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  padding: 4px 20px;
+  text-decoration: none;
+  list-style: none;
+  background-color: rgba(9, 9, 9, 0.91);
+}
+.task2-item {
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task2-item:not(:last-child) {
+  margin-right: 20px;
+}
+.task2-item__few {
+  width: 32px;
+  height: 32px;
+}
+.task2-item__big {
+  width: 40px;
+  height: 40px;
+}
+.task2-item:first-child {
+  background-color: rgb(63, 126, 105);
+  color: aliceblue;
+}
+/* .task2-item:nth-child(2) {
+  background-color: transparent;
+  border: 4px solid aliceblue;
+  color: aliceblue;
+  font-size: 28px;
+} */
+.task2-item:not(:first-child, :last-child) {
+  background-color: transparent;
+  border: 4px solid aliceblue;
+  color: aliceblue;
+  font-size: 28px;
+}
+.task2-item:last-child {
+  background-color: aliceblue;
+  border: 4px solid rgb(63, 126, 105);
+  color: rgb(63, 126, 105);
 }
 
 .task3 {
