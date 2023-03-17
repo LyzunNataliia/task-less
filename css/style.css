@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  counter-reset: section;
+}
+.task1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ":";
+}
