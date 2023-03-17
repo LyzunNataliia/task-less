@@ -15,7 +15,6 @@ body {
 .task2-list {
   display: inline-flex;
   align-items: center;
-  /* justify-content: space-evenly; */
   padding: 4px 20px;
   text-decoration: none;
   list-style: none;
