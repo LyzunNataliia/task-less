@@ -11,3 +11,20 @@ body {
 .task1::after {
   content: " " counter(task1);
 }
+
+.task3 {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  letter-spacing: 1em;
+}
+.task3::before {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: aquamarine;
+  z-index: -1;
+}
