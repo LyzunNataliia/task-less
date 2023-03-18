@@ -12,7 +12,7 @@ body {
   content: " " counter(task1);
 }
 
-.task2-list {
+/* .task2-list {
   display: inline-flex;
   align-items: center;
   padding: 4px 20px;
@@ -48,7 +48,7 @@ body {
   color: aliceblue;
   font-size: 28px;
 } */
-.task2-item:not(:first-child, :last-child) {
+/* .task2-item:not(:first-child, :last-child) {
   background-color: transparent;
   border: 4px solid aliceblue;
   color: aliceblue;
@@ -58,6 +58,56 @@ body {
   background-color: aliceblue;
   border: 4px solid rgb(63, 126, 105);
   color: rgb(63, 126, 105);
+} */
+
+.task2-list {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 20px;
+  text-decoration: none;
+  list-style: none;
+  background-color: rgba(9, 9, 9, 0.91);
+}
+.task2-item:nth-child(n + 3) {
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task2-item:not(.task2-item__current) {
+  width: 32px;
+  height: 32px;
+}
+.task2-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.task2-item:nth-child(-n + 2) {
+  position: relative;
+  visibility: hidden;
+}
+.task2-item:nth-child(-n + 2)::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(40, 142, 57);
+  background-size: cover;
+  content: "✓";
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task2-item__current {
+  width: 40px;
+  height: 40px;
+  background-color: antiquewhite;
+}
+.task2-item:nth-child(n + 4) {
+  border: 4px solid rgb(40, 142, 57);
+  color: antiquewhite;
 }
 
 .task3 {
