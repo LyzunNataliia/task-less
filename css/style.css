@@ -68,7 +68,8 @@ body {
   list-style: none;
   background-color: rgba(9, 9, 9, 0.91);
 }
-.task2-item:nth-child(n + 3) {
+.task2-item__current ~ .task2-item,
+.task2-item__current {
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -83,11 +84,16 @@ body {
   margin-right: 20px;
 }
 
-.task2-item:nth-child(-n + 2) {
+/* .task2-item:nth-child(-n + 2) */
+.task2-item:not(.task2-item__current ~ .task2-item, .task2-item__current) {
   position: relative;
   visibility: hidden;
 }
-.task2-item:nth-child(-n + 2)::before {
+/* .task2-item:nth-child(-n + 2) */
+.task2-item:not(
+    .task2-item__current ~ .task2-item,
+    .task2-item__current
+  )::before {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -105,7 +111,8 @@ body {
   height: 40px;
   background-color: antiquewhite;
 }
-.task2-item:nth-child(n + 4) {
+/* .task2-item:nth-child(n + 4)  */
+.task2-item__current ~ .task2-item {
   border: 4px solid rgb(40, 142, 57);
   color: antiquewhite;
 }
