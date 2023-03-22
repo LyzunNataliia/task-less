@@ -179,10 +179,5 @@ body {
 }
 .task4-data:hover::before {
   transform: scale(0.8, 0.8);
-  /* transform-origin: center; */
-}
-
-.task4-data__select {
-  position: relative;
-  border-radius: 6px;
+  transform-origin: center;
 }
